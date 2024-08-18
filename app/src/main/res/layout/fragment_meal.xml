@@ -9,12 +9,13 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/rv_meals"
+            android:padding="16dp"
             tools:listitem="@layout/item_meal"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
     </GridLayout>

@@ -1,5 +1,7 @@
 package com.example.meals
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     lateinit var navController: NavController
+    private val phoneNumber = "tel:+201000000000"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +30,14 @@ class MainActivity : AppCompatActivity() {
 
         setupWithNavController(binding.bottomNavigation, navController)
 
+        binding.floatingActionButton.setOnClickListener {
+            openDialer()
+        }
 
+    }
+    private fun openDialer() {
+        val intent = Intent(Intent.ACTION_DIAL)
+        intent.data = Uri.parse(phoneNumber)
+        startActivity(intent)
     }
 }

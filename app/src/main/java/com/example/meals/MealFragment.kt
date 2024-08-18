@@ -6,11 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.meals.databinding.FragmentMealsBinding
+import com.example.meals.databinding.FragmentMealBinding
+import androidx.recyclerview.widget.GridLayoutManager
 
 class MealFragment: Fragment(), MealsAdapter.MealClickListner {
 
-    lateinit var binding: FragmentMealsBinding
+    lateinit var binding: FragmentMealBinding
     var meals: MutableList<Meal> = mutableListOf()
     lateinit var mealsAdapter: MealsAdapter
 
@@ -19,7 +20,7 @@ class MealFragment: Fragment(), MealsAdapter.MealClickListner {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentMealsBinding.inflate(inflater, container, false)
+        binding = FragmentMealBinding.inflate(inflater, container, false)
 
         meals = mutableListOf(
             Meal(resources.getString(R.string.burger), R.drawable.burger),
@@ -32,6 +33,9 @@ class MealFragment: Fragment(), MealsAdapter.MealClickListner {
 
         mealsAdapter = MealsAdapter(meals,this)
         binding.rvMeals.adapter = mealsAdapter
+
+        val gridLayoutManager = GridLayoutManager(context, 2)
+        binding.rvMeals.layoutManager = gridLayoutManager
 
         return binding.root
     }

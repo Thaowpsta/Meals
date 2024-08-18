@@ -1,3 +1,5 @@
 package com.example.meals
 
-data class Meal(val title: String, val imageId : Int)
+import java.io.Serializable
+
+data class Meal(val title: String, val imageId : Int): Serializable
