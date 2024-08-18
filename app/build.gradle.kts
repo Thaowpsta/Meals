@@ -74,11 +74,11 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    val nav_version = "2.7.7"
 
-    implementation("androidx.constraintlayout:constraintlayout:2.2.0-alpha13")
-    implementation("com.google.android.material:material:1.9.0")
+    implementation(libs.androidx.constraintlayout.v220alpha13)
+    implementation(libs.material.v190)
 
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(kotlin("script-runtime"))
 }

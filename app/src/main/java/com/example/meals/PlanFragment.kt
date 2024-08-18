@@ -5,18 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.meals.databinding.FragmentCartBinding
+import com.example.meals.databinding.FragmentPlanBinding
 
-class cartFragment : Fragment() {
+class PlanFragment : Fragment() {
 
-    lateinit var binding: FragmentCartBinding
-
+    lateinit var binding: FragmentPlanBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        binding = FragmentCartBinding.inflate(inflater, container, false)
+        // Inflate the layout for this fragment
+        binding = FragmentPlanBinding.inflate(inflater, container, false)
 
         return binding.root
     }

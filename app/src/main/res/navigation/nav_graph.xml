@@ -22,10 +22,10 @@
     </fragment>
     <fragment
         android:id="@+id/cart_fragment"
-        android:name="com.example.meals.cartFragment"
+        android:name="com.example.meals.CartFragment"
         android:label="cartFragment" />
     <fragment
         android:id="@+id/plans_fragment"
-        android:name="com.example.meals.planFragment"
+        android:name="com.example.meals.PlanFragment"
         android:label="planFragment" />
 </navigation>
